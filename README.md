@@ -21,7 +21,7 @@ Note: This package requires `baileys` as a peer dependency. Make sure to install
 This package provides different storage implementations for Baileys:
 
 1. In-Memory Store
-2. Cache Manager Store
+2. Cache Manager Auth State
 
 ## In-Memory Store
 
@@ -33,16 +33,18 @@ const store = makeInMemoryStore({})
 store.bind(baileysSock)
 ```
 
-## Cache Manager Store
+## Cache Manager Auth State
 
 ```typescript
-import { makeCacheManagerStore } from 'baileys-store'
+import { makeCacheManagerAuthState } from 'baileys-store'
+import { caching } from 'cache-manager'
 
-const store = await makeCacheManagerStore({
-  // cache manager options
-})
-// You can bind the store to your Baileys instance
-store.bind(baileysSock)
+// Create a store with cache-manager
+const store = await caching('memory')
+// or any other cache-manager storage
+const authState = await makeCacheManagerAuthState(store, 'session-key')
+// Use the auth state in your baileys connection
+const sock = makeWASocket({ auth: authState })
 ```
 
 For more detailed usage instructions, check the [Example](Example/example.ts) file.
