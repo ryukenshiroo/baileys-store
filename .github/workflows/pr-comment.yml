@@ -28,7 +28,7 @@ jobs:
             The community can help reacting with a thumb up (:thumbsup:) for approval and rocket (:rocket:) for who has tested it.            To test this PR you can run the following command below:
             ```
             # NPM
-            npm install baileys-store@${{ github.event.pull_request.head.repo.full_name }}#${{ github.event.pull_request.head.ref }}
+            npm install @rodrigogs/baileys-store@${{ github.event.pull_request.head.repo.full_name }}#${{ github.event.pull_request.head.ref }}
             # YARN v2
-            yarn add baileys-store@${{ github.event.pull_request.head.repo.full_name }}#${{ github.event.pull_request.head.ref }}
+            yarn add @rodrigogs/baileys-store@${{ github.event.pull_request.head.repo.full_name }}#${{ github.event.pull_request.head.ref }}
             ```

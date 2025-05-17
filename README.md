@@ -9,9 +9,9 @@ A storage implementation for [Baileys](https://github.com/WhiskeySockets/Baileys
 # Installation
 
 ```bash
-npm install baileys-store baileys
+npm install @rodrigogs/baileys-store baileys
 # or
-yarn add baileys-store baileys
+yarn add @rodrigogs/baileys-store baileys
 ```
 
 Note: This package requires `baileys` as a peer dependency. Make sure to install it alongside this package.
@@ -26,7 +26,7 @@ This package provides different storage implementations for Baileys:
 ## In-Memory Store
 
 ```typescript
-import { makeInMemoryStore } from 'baileys-store'
+import { makeInMemoryStore } from '@rodrigogs/baileys-store'
 
 const store = makeInMemoryStore({})
 // You can bind the store to your Baileys instance
@@ -36,7 +36,7 @@ store.bind(baileysSock)
 ## Cache Manager Auth State
 
 ```typescript
-import { makeCacheManagerAuthState } from 'baileys-store'
+import { makeCacheManagerAuthState } from '@rodrigogs/baileys-store'
 import { caching } from 'cache-manager'
 
 // Create a store with cache-manager
