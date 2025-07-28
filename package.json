@@ -35,13 +35,13 @@
   "dependencies": {
     "@adiwajshing/keyed-db": "0.2.4",
     "@whiskeysockets/eslint-config": "github:whiskeysockets/eslint-config",
+    "baileys": "^6.7.17",
     "cache-manager": "5.7.6"
   },
   "devDependencies": {
     "@types/jest": "^27.5.1",
     "@types/node": "^16.0.0",
     "@types/ws": "^8.0.0",
-    "baileys": "^6.7.17",
     "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.0.0",
     "jest": "^27.0.6",
@@ -56,14 +56,6 @@
     "typedoc": "^0.27.9",
     "typedoc-plugin-markdown": "4.4.2",
     "typescript": "^5.8.2"
-  },
-  "peerDependencies": {
-    "baileys": "^6.7.17"
-  },
-  "peerDependenciesMeta": {
-    "baileys": {
-      "optional": false
-    }
   },
   "packageManager": "yarn@1.22.19",
   "engines": {
